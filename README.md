@@ -1,6 +1,6 @@
 ![image-20220722195807720](pic/image-20220722195807720.png)
 
-修改自项目：[YoduBGM](https://github.com/TwinIsland/YoduBGM)，更好的兼容**VOID**主题
+修改自项目：[YoduBGM](https://github.com/jrotty/YoduBGM)，更好的兼容**VOID**主题
 
 **使用**
 
