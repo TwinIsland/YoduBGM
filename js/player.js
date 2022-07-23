@@ -1,32 +1,34 @@
-function playbtu(){
-var oyd = document.getElementById('ydmc');
-if (yaudio.paused) {
-            yaudio.play();
-           oyd.className = 'iconfont icon-music';
-        } else {
-            yaudio.pause();
-            oyd.className = 'iconfont icon-bofang';
-        }
+function playbtu() {
+    var oyd = document.getElementById('music');
+    var skip = document.getElementById('music_skip').style = "";
+    if (yaudio.paused) {
+        yaudio.play();
+        oyd.className = 'voidicon-music-play';
+    } else {
+        yaudio.pause();
+        document.getElementById('music_skip').style = "display: none";
+        oyd.className = 'voidicon-music-pause';
+    }
 }
+
 function next() {
-var oyd=document.getElementById('ydmc');
-if (a == musicArr.length - 1) {
-            a = 0
-        } else {
-            a = a + 1
-        }
-        var sj = musicArr[a];
-        yaudio.src = sj.mp3;
-        yaudio.play();var autopause=0;
-       oyd.className = 'iconfont icon-music';
+    if (a == musicArr.length - 1) {
+        a = 0
+    } else {
+        a = a + 1
+    }
+    var sj = musicArr[a];
+    yaudio.src = sj.mp3;
+    yaudio.play();
+    var autopause = 0;
 }
 
 yaudio.addEventListener('ended',
-function() {
-    next();
-},
-false);
+    function() {
+        next();
+    },
+    false);
 
 yaudio.addEventListener("error", function() {
-    next();
+    yaudio.pause();
 }, false);
