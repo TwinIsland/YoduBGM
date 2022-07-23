@@ -30,5 +30,5 @@ yaudio.addEventListener('ended',
     false);
 
 yaudio.addEventListener("error", function() {
-    yaudio.pause();
+    next();
 }, false);
